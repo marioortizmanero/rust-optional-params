@@ -1,3 +1,10 @@
+//! The API requires a client instance for authentication reasons and etc,
+//! which contains all the different endpoints. This module shows how the same
+//! endpoint can be implemented in different ways for our client.
+//!
+//! See the main module for what's important: how the user has access to
+//! the endpoint.
+
 /// The main API with credentials and such
 #[derive(Default, Clone)]
 pub struct APIClient;
@@ -7,13 +14,6 @@ pub struct APIClient;
 pub struct Value;
 type ReturnedValue = Result<Value, Box<dyn std::error::Error>>;
 
-/// The API requires a client for authentication reasons and etc, which
-/// contains all the different endpoints. This example shows how the same
-/// endpoint can be implemented in different ways.
-///
-/// See the main function for what's important: how the user has access to
-/// the endpoint. The rest of the code has to do with the inner implementation
-/// of some of the endoints.
 impl APIClient {
     /// The actual code for the endpoint, to avoid repetition later on
     pub(super) fn actual_endpoint(
