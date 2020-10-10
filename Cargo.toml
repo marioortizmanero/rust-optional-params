@@ -1,0 +1,9 @@
+[package]
+name = "optional_params_showcase"
+version = "0.1.0"
+authors = ["Mario Ortiz Manero <marioortizmanero@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+derive_builder = "0.9.0"
+duang = "0.1.2"
